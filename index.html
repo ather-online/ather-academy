@@ -582,6 +582,1096 @@
             font-size: 0.92rem;
         }
 
+        /* --- OFFER SECTION (CLICKABLE CARD) --- */
+        .offer {
+            padding: 40px 0 80px 0;
+            background-color: var(--off-white);
+        }
+
+        .offer-box {
+            display: block; /* يجعل البطاقة بالكامل رابطاً تفاعلياً */
+            background: linear-gradient(135deg, #0A5F38, #053D24);
+            color: #ffffff;
+            padding: 50px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(10, 95, 56, 0.22);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .offer-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(10, 95, 56, 0.35);
+        }
+
+        .offer-badge {
+            background-color: var(--gold);
+            color: #053D24;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .offer-box h2 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .offer-sub {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--light-gold);
+            margin-bottom: 12px;
+        }
+
+        .offer-desc {
+            font-size: 0.98rem;
+            opacity: 0.92;
+            max-width: 540px;
+            margin: 0 auto 28px auto;
+        }
+
+        /* --- MISSION & ABOUT SECTION --- */
+        .about-mission {
+            padding: 80px 0;
+            background-color: var(--bg-gray);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .about-card, .mission-card {
+            background-color: var(--card-bg);
+            padding: 35px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .about-card h2, .mission-card h2 {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 0.9rem;
+        }
+
+        .about-card p, .mission-card p {
+            color: var(--text-light);
+            font-size: 0.98rem;
+            line-height: 1.8;
+        }
+
+        /* --- TECH SECTION --- */
+        .tech {
+            padding: 60px 0;
+            background-color: var(--off-white);
+            text-align: center;
+        }
+
+        .tech-icons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 22px;
+            flex-wrap: wrap;
+        }
+
+        .tech-pill {
+            background-color: var(--card-bg);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            color: var(--primary-green);
+            border: 1px solid rgba(201, 160, 80, 0.25);
+            font-size: 0.92rem;
+        }
+
+        /* --- FAQ SECTION --- */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--bg-gray);
+        }
+
+        .faq-accordion {
+            max-width: 740px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            margin-bottom: 12px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 18px 22px;
+            font-weight: 700;
+            color: var(--primary-green);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.02rem;
+        }
+
+        .faq-answer {
+            padding: 0 22px 18px 22px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            color: var(--gold);
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--off-white);
+            text-align: center;
+        }
+
+        .contact-btns {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--dark-green);
+            color: #ffffff;
+            padding: 50px 0 22px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+        }
+
+        .footer-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-slogan {
+            font-size: 1.05rem;
+            color: #F7F3E9;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .footer-links a {
+            color: #F7F3E9;
+            font-size: 0.92rem;
+        }
+
+        .footer-copy {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* --- MOBILE STICKY BAR --- */
+        .mobile-sticky-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--card-bg);
+            padding: 10px 15px;
+            box-shadow: 0 -3px 15px rgba(0,0,0,0.08);
+            z-index: 999;
+        }
+
+        .mobile-sticky-bar .btn {
+            width: 100%;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 900px) {
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-container, .kids-container, .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                text-align: center;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero-content .h1-sub {
+                font-size: 1.25rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-sticky-bar {
+                display: block;
+            }
+
+            body {
+                padding-bottom: 60px;
+            }
+
+            .offer-box h2 {
+                font-size: 1.8rem;
+            }
+
+            .offer-sub {
+                font-size: 1.18rem;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HEADER & NAVBAR -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo-box">
+                <img src="logo.jpg" alt="شعار مقرأة أثر" class="logo-img" onerror="this.style.display='none'">
+                <div class="logo-text-group">
+                    <span class="logo-text">مقرأة أثر</span>
+                    <span class="logo-slogan">إتقانٌ يُرى.. وأَثر يَبقى</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">من نحن</a>
+                <a href="#pathways">مساراتنا</a>
+                <a href="#why">لماذا أثر؟</a>
+                <a href="#faq">الأسئلة الشائعة</a>
+                <a href="#contact">تواصل معنا</a>
+            </nav>
+            <a href="register.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.88rem;">ابدأ مجانًا</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container">
+            
+            <!-- زر الوضع الليلي -->
+            <div class="theme-toggle-wrapper">
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="تبديل الوضع الليلي">🌙</button>
+            </div>
+
+            <div class="hero-badge-wrapper">
+                <span class="hero-badge">مقرأة إلكترونية عالمية</span>
+            </div>
+
+            <div class="hero-container" style="margin-top: 15px;">
+                <div class="hero-content">
+                    <h1>مقرأة أثر</h1>
+                    <div class="h1-sub">«إتقانٌ يُرى.. وأَثر يَبقى»</div>
+                    <p>مقرأة إلكترونية لتعليم القرآن الكريم وعلومه عن بُعد، بمتابعة تعليمية متكاملة تهدف إلى بناء علاقة راسخة ومستدامة مع كتاب الله.</p>
+                    <div class="hero-btns">
+                        <a href="register.html" class="btn btn-primary">ابدأ التقييم المجاني</a>
+                        <a href="register.html" class="btn btn-whatsapp">سجل الآن عبر واتساب</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="child.jpg" alt="طفل يتلو القرآن الكريم بروحانية">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS OVERLAY SECTION -->
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <h4>100%</h4>
+                <p>تعليم إلكتروني تفاعلي</p>
+            </div>
+            <div class="stat-item">
+                <h4>5 مسارات</h4>
+                <p>تناسب كل المستويات</p>
+            </div>
+            <div class="stat-item">
+                <h4>أسبوع مجاني</h4>
+                <p>لتجربة الدراسة والتقييم</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. WHY ATHER SECTION -->
+    <section class="why" id="why">
+        <div class="container">
+            <h2 class="section-title">لماذا مقرأة أثر؟</h2>
+            <p class="section-subtitle">لأن تعلم القرآن ليس مجرد حفظٍ وتلاوة، بل رحلة تحتاج إلى توجيه ومتابعة واستمرار.</p>            
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-card-icon">👤</div>
+                    <h3>متابعة فردية</h3>
+                    <p>متابعة تناسب مستوى الطالب وااحتياجاته.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">💻</div>
+                    <h3>تعليم عن بُعد</h3>
+                    <p>تعلم القرآن من منزلك عبر وسائل إلكترونية سهلة.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">📊</div>
+                    <h3>تقييم المستوى</h3>
+                    <p>نبدأ بالتعرف على مستوى الطالب لتحديد البداية المناسبة.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">🌿</div>
+                    <h3>بيئة تعليمية هادئة</h3>
+                    <p>تعليم يجمع بين الإتقان، المتابعة، وحب القرآن.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PATHWAYS SECTION -->
+    <section class="pathways" id="pathways">
+        <div class="container">
+            <h2 class="section-title">مساراتنا التعليمية</h2>
+            <p class="section-subtitle">برامج تعليمية متكاملة مصممة لتناسب مختلف المستويات والتطلعات.</p>
+            
+            <div class="pathways-grid">
+                <div class="pathway-card">
+                    <h3>مسار القراءة العربية السليمة</h3>
+                    <p>تعلم أحكام القراءة الصحيحة وأساسيات النطق السليم.</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>مسار تلاوة القرآن الكريم</h3>
+                    <p>تحسين التلاوة وإتقان أحكام التجويد حتى التمكن والإتقان.</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>مسار حفظ القرآن الكريم</h3>
+                    <p>خطط حفظ متقنة ومراجع مستمرة حتى حفظ القرآن كاملاً.</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>مسار الإجازة بالرواية المفردة</h3>
+                    <p>الإجازة في رواية واحدة (حفص عن عاصم - ورش عن نافع - قالون...).</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>مسار الإجازة بالقراءات</h3>
+                    <p>الإجازة في القراءات العشر الصغرى ثم العشر الكبرى.</p>
+                </div>
+            </div>
+            <div class="pathways-note">للذكور والإناث من مختلف الأعمار</div>
+        </div>
+    </section>
+
+    <!-- 5. KIDS SECTION -->
+    <section class="kids">
+        <div class="container kids-container">
+            <div class="kids-image">
+                <img src="child.jpg" alt="طفل يقرأ القرآن الكريم بكل خشوع">
+            </div>
+            <div class="kids-content">
+                <h2>رحلة طفلك مع القرآن تبدأ بخطوة</h2>
+                <p>نساعد الطفل على بناء علاقة محبة مع القرآن، مع تعليم التلاوة والمتابعة بصورة تدريجية تناسب مستواه.</p>
+                <div class="kids-list">
+                    <div class="kids-item"><span>✓</span> تقييم مستوى التلاوة</div>
+                    <div class="kids-item"><span>✓</span> متابعة مستمرة</div>
+                    <div class="kids-item"><span>✓</span> تعليم عن بُعد</div>
+                    <div class="kids-item"><span>✓</span> بيئة مناسبة للطفل</div>
+                    <div class="kids-item"><span>✓</span> تدرج حسب مستوى الطالب</div>
+                </div>
+                <a href="register.html" class="btn btn-primary">احجز التقييم المجاني</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. STEPS SECTION -->
+    <section class="steps">
+        <div class="container">
+            <h2 class="section-title">كيف تبدأ رحلتك معنا؟</h2>
+            <p class="section-subtitle">ثلاث خطوات بسيطة للانضمام إلى حلقات المقرأة.</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3>التقييم</h3>
+                    <p>نتعرف على مستوى الطالب في التلاوة عبر تقييم مجاني.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3>تحديد المسار</h3>
+                    <p>نحدد المستوى والمسار التعليمي الأنسب للطالب.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3>بدء التعلم</h3>
+                    <p>يبدأ الطالب رحلته التعليمية المباشرة مع المتابعة المستمرة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. OFFER SECTION (بطاقة خضراء بالكامل قابلة للضغط) -->
+    <section class="offer" id="offer">
+        <div class="container">
+            <a href="register.html" class="offer-box">
+                <span class="offer-badge">فرصة للطلاب الجدد</span>
+                <h2>ابدأ معنا مجانًا</h2>
+                <div class="offer-sub">تقييم مجاني لمستوى تلاوة الطالب + الأسبوع الأول مجاني</div>
+                <p class="offer-desc">فرصة للتعرف على طريقة التعليم وتجربة الرحلة قبل الاستمرار.</p>
+                <span class="btn btn-whatsapp" style="font-size: 1.05rem; padding: 13px 35px;">احجز الآن عبر واتساب</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 8. MISSION & ABOUT SECTION -->
+    <section class="about-mission" id="about">
+        <div class="container about-grid">
+            <div class="mission-card">
+                <h2>رسالتنا</h2>
+                <p>نسعى إلى تقديم تعليم قرآني إلكتروني يجمع بين الإتقان، المتابعة، والتيسير، لنساعد طلابنا على بناء صلة ثابتة بكتاب الله، ويكون لتعلمهم أثر يمتد في حياتهم.</p>
+            </div>
+            <div class="about-card">
+                <h2>عن مقرأة أثر</h2>
+                <p>مقرأة أثر هي منصة تعليمية إلكترونية تهتم بتعليم القرآن الكريم وعلومه عن بُعد، وتسعى إلى تقديم تجربة تعليمية هادئة ومنظمة تجمع بين العلم، المتابعة، والإتقان.<br><br><strong>نؤمن أن أثر القرآن لا يقف عند إتقان التلاوة، بل يمتد إلى القلب والسلوك والحياة.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. TECH SECTION -->
+    <section class="tech">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 1.6rem;">تعلم من حيث أنت</h2>
+            <p class="section-subtitle" style="margin-bottom: 1.2rem;">نستخدم وسائل تعليم إلكترونية تتيح للطالب التعلم عن بُعد بسهولة ومرونة.</p>
+            <div class="tech-icons">
+                <span class="tech-pill">Google Meet</span>
+                <span class="tech-pill">Telegram</span>
+                <span class="tech-pill">WhatsApp</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ SECTION -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">الأسئلة الشائعة</h2>
+            <p class="section-subtitle">إجابات سريعة على معظم استفسارات أولياء الأمور والطلاب.</p>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">هل التعليم عن بُعد؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">نعم، يتم التعليم إلكترونيًا من خلال وسائل التواصل والتعليم المناسبة مثل Google Meet وTelegram.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل يوجد تقييم قبل البدء؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">نعم، نقدم تقييمًا مجانيًا لمستوى التلاوة للتعرف على احتياجات الطالب وتحديد مساره.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل يمكن للطفل تجربة الدراسة؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">نعم، يوجد أسبوع تجريبي مجاني للتأكد من ملاءمة الطريقة للطفل وسهولة التفاعل.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل التسجيل للذكور والإناث؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">نعم، الحلقات متاحة للذكور والإناث من مختلف الأعمار والمستويات.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل يوجد تعليم للأطفال؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">نعم، يوجد مسار مخصص لتعليم الأطفال ومتابعتهم بأسلوب ممتع ومناسب لأعمارهم.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">كيف أتواصل معكم؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">يمكن التواصل معنا مباشرة عبر الواتساب لحجز التقييم المجاني أو الاستفسار.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">ابدأ رحلة القرآن مع مقرأة أثر</h2>
+            <p class="section-subtitle">للاستفسار أو حجز التقييم المجاني، تواصل معنا مباشرة عبر الواتساب.</p>
+            <div class="contact-btns">
+                <a href="https://wa.me/963964684069" class="btn btn-whatsapp">+963 964 684 069</a>
+                <a href="https://wa.me/963995474768" class="btn btn-whatsapp">+963 995 474 768</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer>
+        <div class="container footer-container">
+            <img src="logo.jpg" alt="مقرأة أثر" class="footer-logo" onerror="this.style.display='none'">
+            <div class="logo-text" style="color: #ffffff;">مقرأة أثر</div>
+            <div class="footer-slogan">«إتقانٌ يُرى.. وأَثر يَبقى»</div>
+            
+            <div class="footer-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">من نحن</a>
+                <a href="#pathways">مساراتنا</a>
+                <a href="#faq">الأسئلة الشائعة</a>
+                <a href="#contact">تواصل معنا</a>
+            </div>
+            
+            <div class="footer-copy">
+                © 2026 مقرأة أثر — جميع الحقوق محفوظة
+            </div>
+        </div>
+    </footer>
+
+    <!-- 13. STICKY MOBILE BAR -->
+    <div class="mobile-sticky-bar">
+        <a href="register.html" class="btn btn-whatsapp">تواصل معنا عبر واتساب</a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // FAQ Accordion Script
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                item.classList.toggle('active');
+                const toggle = q.querySelector('.faq-toggle');
+                toggle.textContent = item.classList.contains('active') ? '−' : '+';
+            });
+        });
+
+        // Dark Mode Toggle Logic
+        const themeBtn = document.getElementById('themeToggle');
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if(document.body.classList.contains('dark-mode')) {
+                themeBtn.textContent = '☀️';
+            } else {
+                themeBtn.textContent = '🌙';
+            }
+        });
+    </script>
+</body>
+</html>
+            border-radius: 4px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0.6rem auto 3rem auto;
+            font-weight: 500;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-green);
+            color: #ffffff;
+            border-color: var(--primary-green);
+        }
+
+        body.dark-mode .btn-primary {
+            color: #0D1F17;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: #ffffff;
+            border-color: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+            border-color: #1da851;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(12px);
+            padding: 12px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+            border-bottom: 1px solid rgba(201, 160, 80, 0.25);
+            transition: background-color 0.4s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 52px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            line-height: 1.1;
+        }
+
+        .logo-slogan {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        /* --- HERO SECTION & DARK MODE TOGGLE --- */
+        .hero {
+            padding: 140px 0 80px 0;
+            background: radial-gradient(circle at top right, rgba(201, 160, 80, 0.08), transparent 50%), var(--off-white);
+            position: relative;
+        }
+
+        /* Dark Mode Toggle Button */
+        .theme-toggle-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .theme-toggle-btn {
+            background-color: var(--card-bg);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .theme-toggle-btn:hover {
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-badge-wrapper {
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: var(--light-gold);
+            color: var(--gold);
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            border: 1px solid rgba(201, 160, 80, 0.3);
+        }
+
+        .hero-content h1 {
+            font-size: 2.9rem;
+            font-weight: 900;
+            color: var(--primary-green);
+            line-height: 1.2;
+            margin-bottom: 0.2rem;
+            text-align: center;
+        }
+
+        .hero-content .h1-sub {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.3px;
+            text-align: center;
+        }
+
+        .hero-content p {
+            font-size: 1.08rem;
+            color: var(--text-light);
+            margin: 0 auto 2.2rem auto;
+            max-width: 520px;
+            text-align: center;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            border: 5px solid var(--card-bg);
+            max-height: 420px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* --- STATS OVERLAY BAR --- */
+        .stats-bar {
+            background-color: var(--card-bg);
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            padding: 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+            border: 1px solid rgba(201, 160, 80, 0.2);
+        }
+
+        .stat-item h4 {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        /* --- WHY SECTION --- */
+        .why {
+            padding: 80px 0 70px 0;
+            background-color: var(--bg-gray);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .why-card {
+            background-color: var(--card-bg);
+            padding: 24px 18px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(201, 160, 80, 0.18);
+            transition: var(--transition);
+        }
+
+        .why-card-icon {
+            width: 48px;
+            height: 48px;
+            background-color: var(--light-gold);
+            color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin: 0 auto 14px auto;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow-md);
+        }
+
+        .why-card h3 {
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: var(--text-light);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        /* --- PATHWAYS SECTION --- */
+        .pathways {
+            padding: 80px 0;
+            background-color: var(--off-white);
+        }
+
+        .pathways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+            margin-bottom: 35px;
+        }
+
+        .pathway-card {
+            background-color: var(--card-bg);
+            padding: 28px 22px;
+            border-radius: var(--border-radius);
+            border-right: 4px solid var(--gold);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pathway-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pathway-card h3 {
+            font-size: 1.18rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .pathway-card p {
+            color: var(--text-light);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .pathways-note {
+            text-align: center;
+            font-weight: 700;
+            color: var(--gold);
+            background-color: var(--light-gold);
+            padding: 10px 28px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 0 auto;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.92rem;
+            border: 1px solid rgba(201, 160, 80, 0.3);
+        }
+
+        /* --- KIDS SECTION --- */
+        .kids {
+            padding: 80px 0;
+            background-color: var(--bg-gray);
+        }
+
+        .kids-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 45px;
+        }
+
+        .kids-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            max-height: 420px;
+            width: 100%;
+            object-fit: cover;
+            border: 4px solid var(--card-bg);
+        }
+
+        .kids-content h2 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .kids-content p {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .kids-list {
+            margin-bottom: 2rem;
+        }
+
+        .kids-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            font-size: 0.98rem;
+            background: var(--card-bg);
+            padding: 10px 16px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .kids-item span {
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+
+        /* --- STEPS SECTION --- */
+        .steps {
+            padding: 80px 0;
+            background-color: var(--off-white);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .step-card {
+            background-color: var(--card-bg);
+            padding: 32px 22px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--primary-green);
+            transition: var(--transition);
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-num {
+            font-size: 2.6rem;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .step-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            color: var(--text-light);
+            font-size: 0.92rem;
+        }
+
         /* --- OFFER SECTION --- */
         .offer {
             padding: 40px 0 80px 0;
