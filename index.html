@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>مقرأة أثر | تعليم القرآن الكريم عن بُعد</title>
+    <meta name="description" content="مقرأة أثر لتعليم القرآن الكريم وعلومه عن بُعد، مع تقييم مجاني لمستوى التلاوة وأسبوع تجريبي مجاني للطلاب.">
+    <meta name="keywords" content="مقرأة أثر, تعليم القرآن عن بعد, تعليم القرآن للأطفال, تحفيظ القرآن أونلاين, تعليم التجويد عن بعد, مقرأة إلكترونية">
+    
+    <!-- Google Fonts (Cairo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS VARIABLES & BRANDING --- */
+        :root {
+            --primary-green: #0A5F38;
+            --dark-green: #053D24;
+            --gold: #C9A050;
+            --light-gold: #F7F3E9;
+            --off-white: #FCFBF9;
+            --text-main: #1A1A1A;
+            --text-light: #555555;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+            --shadow-sm: 0 2px 10px rgba(0,0,0,0.04);
+            --shadow-md: 0 5px 20px rgba(0,0,0,0.08);
+            --border-radius: 14px;
+        }
+
+        /* --- RESET & GLOBAL STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-main);
+            line-height: 1.8;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-green);
+            color: var(--white);
+            border-color: var(--primary-green);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-green);
+            border-color: var(--dark-green);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: var(--white);
+            border-color: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+            border-color: #1da851;
+            transform: translateY(-2px);
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background-color: rgba(252, 251, 249, 0.96);
+            backdrop-filter: blur(8px);
+            padding: 12px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box svg {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary-green);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 150px 0 80px 0;
+            background-color: var(--white);
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            line-height: 1.2;
+            margin-bottom: 0.2rem;
+        }
+
+        .hero-content .h1-sub {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 520px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            border: 4px solid var(--white);
+            max-height: 400px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* --- WHY SECTION --- */
+        .why {
+            padding: 80px 0;
+            background-color: var(--off-white);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .why-card {
+            background-color: var(--white);
+            padding: 28px 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(201, 160, 80, 0.15);
+            transition: var(--transition);
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow-md);
+        }
+
+        .why-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* --- PATHWAYS SECTION --- */
+        .pathways {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .pathways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+            margin-bottom: 40px;
+        }
+
+        .pathway-card {
+            background-color: var(--off-white);
+            padding: 30px 25px;
+            border-radius: var(--border-radius);
+            border-right: 5px solid var(--gold);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .pathway-card:hover {
+            background-color: var(--white);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pathway-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .pathway-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .pathways-note {
+            text-align: center;
+            font-weight: 700;
+            color: var(--dark-green);
+            background-color: var(--light-gold);
+            padding: 12px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 0 auto;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.95rem;
+        }
+
+        /* --- KIDS SECTION --- */
+        .kids {
+            padding: 80px 0;
+            background-color: var(--off-white);
+        }
+
+        .kids-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .kids-image img {
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            max-height: 400px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .kids-content h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .kids-content p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .kids-list {
+            margin-bottom: 2rem;
+        }
+
+        .kids-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .kids-item span {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* --- STEPS SECTION --- */
+        .steps {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .step-card {
+            background-color: var(--off-white);
+            padding: 35px 25px;
+            border-radius: var(--border-radius);
+        }
+
+        .step-num {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .step-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .step-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* --- OFFER SECTION --- */
+        .offer {
+            padding: 40px 0 80px 0;
+            background-color: var(--white);
+        }
+
+        .offer-box {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: var(--white);
+            padding: 50px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(10, 95, 56, 0.2);
+        }
+
+        .offer-badge {
+            background-color: var(--gold);
+            color: var(--dark-green);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .offer-box h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .offer-sub {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--light-gold);
+            margin-bottom: 12px;
+        }
+
+        .offer-desc {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 550px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* --- MISSION & ABOUT SECTION --- */
+        .about-mission {
+            padding: 80px 0;
+            background-color: var(--off-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .about-card, .mission-card {
+            background-color: var(--white);
+            padding: 35px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .about-card h2, .mission-card h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .about-card p, .mission-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* --- TECH SECTION --- */
+        .tech {
+            padding: 60px 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .tech-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .tech-pill {
+            background-color: var(--off-white);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            color: var(--primary-green);
+            border: 1px solid rgba(201, 160, 80, 0.2);
+            font-size: 0.95rem;
+        }
+
+        /* --- FAQ SECTION --- */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--off-white);
+        }
+
+        .faq-accordion {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            margin-bottom: 12px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 18px 25px;
+            font-weight: 700;
+            color: var(--primary-green);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.05rem;
+        }
+
+        .faq-answer {
+            padding: 0 25px 18px 25px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            color: var(--gold);
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .contact-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 50px 0 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .footer-links a {
+            color: var(--light-gold);
+            font-size: 0.95rem;
+        }
+
+        .footer-copy {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* --- MOBILE STICKY BAR --- */
+        .mobile-sticky-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            padding: 10px 15px;
+            box-shadow: 0 -3px 15px rgba(0,0,0,0.08);
+            z-index: 999;
+        }
+
+        .mobile-sticky-bar .btn {
+            width: 100%;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 900px) {
+            .hero-container, .kids-container, .about-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero-content .h1-sub {
+                font-size: 1.3rem;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-sticky-bar {
+                display: block;
+            }
+
+            body {
+                padding-bottom: 65px;
+            }
+
+            .offer-box h2 {
+                font-size: 1.8rem;
+            }
+
+            .offer-sub {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HEADER & NAVBAR -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo-box">
+                <!-- SVG نقي للشعار الأصلي يمنع أخطاء التحميل نهائياً -->
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="46" stroke="#C9A050" stroke-width="3" stroke-dasharray="6 3"/>
+                    <circle cx="50" cy="50" r="40" stroke="#0A5F38" stroke-width="2"/>
+                    <path d="M30 55 C40 45, 60 45, 70 55 C60 65, 40 65, 30 55 Z" fill="#0A5F38"/>
+                    <path d="M50 30 L50 65 M38 45 L62 45" stroke="#C9A050" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">مقرأة أثر</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">من نحن</a>
+                <a href="#pathways">مساراتنا</a>
+                <a href="#why">لماذا أثر؟</a>
+                <a href="#faq">الأسئلة الشائعة</a>
+                <a href="#contact">تواصل معنا</a>
+            </nav>
+            <a href="#offer" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.85rem;">ابدأ مجانًا</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>مقرأة أثر</h1>
+                <div class="h1-sub">تعليم القرآن الكريم بإتقان... ليبقى أثره</div>
+                <p>مقرأة إلكترونية لتعليم القرآن الكريم وعلومه عن بُعد، بمتابعة تعليمية تهدف إلى بناء علاقة راسخة مع كتاب الله.</p>
+                <div class="hero-btns">
+                    <a href="#offer" class="btn btn-primary">ابدأ التقييم المجاني</a>
+                    <a href="https://wa.me/963964684069" class="btn btn-whatsapp">تواصل معنا عبر واتساب</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- صورة طفل يتلو القرآن في بيئة منزلية دافئة -->
+                <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80" alt="طفل يقرأ القرآن في بيئة منزلية هادئة">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. WHY ATHER SECTION -->
+    <section class="why" id="why">
+        <div class="container">
+            <h2 class="section-title">لماذا مقرأة أثر؟</h2>
+            <p class="section-subtitle">لأن تعلم القرآن ليس مجرد حفظٍ وتلاوة، بل رحلة تحتاج إلى توجيه ومتابعة واستمرار.</p>            
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>متابعة فردية</h3>
+                    <p>متابعة تناسب مستوى الطالب واحتياجاته الخاصة.</p>
+                </div>
+                <div class="why-card">
+                    <h3>تعليم عن بُعد</h3>
+                    <p>تعلم القرآن من منزلك عبر وسائل تعليم إلكترونية سهلة.</p>
+                </div>
+                <div class="why-card">
+                    <h3>تقييم المستوى</h3>
+                    <p>نبدأ بالتعرف على مستوى الطالب لتحديد نقطة البداية المناسبة.</p>
+                </div>
+                <div class="why-card">
+                    <h3>بيئة تعليمية هادئة</h3>
+                    <p>تعليم يجمع بين الإتقان، المتابعة، وحب القرآن.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PATHWAYS SECTION (المسارات المحدثة) -->
+    <section class="pathways" id="pathways">
+        <div class="container">
+            <h2 class="section-title">مساراتنا التعليمية</h2>
+            <p class="section-subtitle">برامج تعليمية متكاملة مصممة لتناسب مختلف المستويات والتطلعات.</p>
+            
+            <div class="pathways-grid">
+                <div class="pathway-card">
+                    <h3>مسار القراءة العربية السليمة</h3>
+                    <p>تعلم أحكام القراءة الصحيحة وأساسيات النطق السليم.</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>مسار تلاوة القرآن الكريم</h3>
+                    <p>تحسين التلاوة وإتقان أحكام التجويد حتى التمكن والإتقان.</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>مسار حفظ القرآن الكريم</h3>
+                    <p>خطط حفظ متقنة ومراجعة مستمرة حتى حفظ القرآن كاملاً.</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>مسار الإجازة بالرواية المفردة</h3>
+                    <p>الإجازة في رواية واحدة (حفص عن عاصم - ورش عن نافع - قالون...).</p>
+                </div>
+                <div class="pathway-card">
+                    <h3>مسار الإجازة بالقراءات</h3>
+                    <p>الإجازة في القراءات العشر الصغرى ثم العشر الكبرى.</p>
+                </div>
+            </div>
+            <div class="pathways-note">للذكور والإناث من مختلف الأعمار</div>
+        </div>
+    </section>
+
+    <!-- 5. KIDS SECTION (استبدال الصورة بصورة طفل يقرأ) -->
+    <section class="kids">
+        <div class="container kids-container">
+            <div class="kids-image">
+                <img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=800&q=80" alt="طفل يقرأ القرآن الكريم في بيئة منزلية">
+            </div>
+            <div class="kids-content">
+                <h2>رحلة طفلك مع القرآن تبدأ بخطوة</h2>
+                <p>نساعد الطفل على بناء علاقة محبة مع القرآن، مع تعليم التلاوة والمتابعة بصورة تدريجية تناسب مستواه.</p>
+                <div class="kids-list">
+                    <div class="kids-item"><span>✓</span> تقييم مستوى التلاوة</div>
+                    <div class="kids-item"><span>✓</span> متابعة مستمرة</div>
+                    <div class="kids-item"><span>✓</span> تعليم عن بُعد</div>
+                    <div class="kids-item"><span>✓</span> بيئة مناسبة للطفل</div>
+                    <div class="kids-item"><span>✓</span> تدرج حسب مستوى الطالب</div>
+                </div>
+                <a href="#offer" class="btn btn-primary">احجز التقييم المجاني</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. STEPS SECTION -->
+    <section class="steps">
+        <div class="container">
+            <h2 class="section-title">كيف تبدأ رحلتك معنا؟</h2>
+            <p class="section-subtitle">ثلاث خطوات بسيطة للانضمام إلى حلقات المقرأة.</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3>التقييم</h3>
+                    <p>نتعرف على مستوى الطالب في التلاوة عبر تقييم مجاني.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3>تحديد المسار</h3>
+                    <p>نحدد المستوى والمسار التعليمي الأنسب للطالب.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3>بدء التعلم</h3>
+                    <p>يبدأ الطالب رحلته التعليمية المباشرة مع المتابعة المستمرة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. OFFER SECTION -->
+    <section class="offer" id="offer">
+        <div class="container">
+            <div class="offer-box">
+                <span class="offer-badge">فرصة للطلاب الجدد</span>
+                <h2>ابدأ معنا مجانًا</h2>
+                <div class="offer-sub">تقييم مجاني لمستوى تلاوة الطالب + الأسبوع الأول مجاني</div>
+                <p class="offer-desc">فرصة للتعرف على طريقة التعليم وتجربة الرحلة قبل الاستمرار.</p>
+                <a href="https://wa.me/963964684069" class="btn btn-whatsapp" style="font-size: 1.1rem; padding: 14px 35px;">احجز الآن عبر واتساب</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. MISSION & ABOUT SECTION -->
+    <section class="about-mission" id="about">
+        <div class="container about-grid">
+            <div class="mission-card">
+                <h2>رسالتنا</h2>
+                <p>نسعى إلى تقديم تعليم قرآني إلكتروني يجمع بين الإتقان، المتابعة، والتيسير، لنساعد طلابنا على بناء صلة ثابتة بكتاب الله، ويكون لتعلمهم أثر يمتد في حياتهم.</p>
+            </div>
+            <div class="about-card">
+                <h2>عن مقرأة أثر</h2>
+                <p>مقرأة أثر هي منصة تعليمية إلكترونية تهتم بتعليم القرآن الكريم وعلومه عن بُعد، وتسعى إلى تقديم تجربة تعليمية هادئة ومنظمة تجمع بين العلم، المتابعة، والإتقان.<br><br><strong>نؤمن أن أثر القرآن لا يقف عند إتقان التلاوة، بل يمتد إلى القلب والسلوك والحياة.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. TECH SECTION -->
+    <section class="tech">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 1.8rem;">تعلم من حيث أنت</h2>
+            <p class="section-subtitle" style="margin-bottom: 1.5rem;">نستخدم وسائل تعليم إلكترونية تتيح للطالب التعلم عن بُعد بسهولة ومرونة.</p>
+            <div class="tech-icons">
+                <span class="tech-pill">Google Meet</span>
+                <span class="tech-pill">Telegram</span>
+                <span class="tech-pill">WhatsApp</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ SECTION -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">الأسئلة الشائعة</h2>
+            <p class="section-subtitle">إجابات سريعة على معظم استفسارات أولياء الأمور والطلاب.</p>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">هل التعليم عن بُعد؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">نعم، يتم التعليم إلكترونيًا من خلال وسائل التواصل والتعليم المناسبة مثل Google Meet وTelegram.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل يوجد تقييم قبل البدء؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">نعم، نقدم تقييمًا مجانيًا لمستوى التلاوة للتعرف على احتياجات الطالب وتحديد مساره.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل يمكن للطفل تجربة الدراسة؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">نعم، يوجد أسبوع تجريبي مجاني للتأكد من ملاءمة الطريقة للطفل وسهولة التفاعل.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل التسجيل للذكور والإناث؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">نعم، الحلقات متاحة للذكور والإناث من مختلف الأعمار والمستويات.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل يوجد تعليم للأطفال؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">نعم، يوجد مسار مخصص لتعليم الأطفال ومتابعتهم بأسلوب ممتع ومناسب لأعمارهم.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">كيف أتواصل معكم؟ <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">يمكن التواصل معنا مباشرة عبر الواتساب لحجز التقييم المجاني أو الاستفسار.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">ابدأ رحلة القرآن مع مقرأة أثر</h2>
+            <p class="section-subtitle">للاستفسار أو حجز التقييم المجاني، تواصل معنا مباشرة عبر الواتساب.</p>
+            <div class="contact-btns">
+                <a href="https://wa.me/963964684069" class="btn btn-whatsapp">+963 964 684 069</a>
+                <a href="https://wa.me/963995474768" class="btn btn-whatsapp">+963 995 474 768</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer>
+        <div class="container footer-container">
+            <div class="logo-box">
+                <svg viewBox="0 0 100 100" fill="none" style="width: 50px; height: 50px;">
+                    <circle cx="50" cy="50" r="46" stroke="#C9A050" stroke-width="3" stroke-dasharray="6 3"/>
+                    <circle cx="50" cy="50" r="40" stroke="#ffffff" stroke-width="2"/>
+                    <path d="M30 55 C40 45, 60 45, 70 55 C60 65, 40 65, 30 55 Z" fill="#ffffff"/>
+                    <path d="M50 30 L50 65 M38 45 L62 45" stroke="#C9A050" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="logo-text" style="color: var(--white);">مقرأة أثر</div>
+            <p style="font-size: 0.95rem; opacity: 0.9;">تعليم القرآن الكريم بإتقان... ليبقى أثره</p>
+            
+            <div class="footer-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">من نحن</a>
+                <a href="#pathways">مساراتنا</a>
+                <a href="#faq">الأسئلة الشائعة</a>
+                <a href="#contact">تواصل معنا</a>
+            </div>
+            
+            <div class="footer-copy">
+                © 2026 مقرأة أثر — جميع الحقوق محفوظة
+            </div>
+        </div>
+    </footer>
+
+    <!-- 13. STICKY MOBILE BAR -->
+    <div class="mobile-sticky-bar">
+        <a href="https://wa.me/963964684069" class="btn btn-whatsapp">تواصل معنا عبر واتساب</a>
+    </div>
+
+    <!-- SCRIPT FOR FAQ ACCORDION -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                item.classList.toggle('active');
+                const toggle = q.querySelector('.faq-toggle');
+                toggle.textContent = item.classList.contains('active') ? '−' : '+';
+            });
+        });
+    </script>
+</body>
+</html>
